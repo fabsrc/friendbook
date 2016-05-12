@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #909090;
+}
+
+a {
+  color: #3B5998;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.friendbook-header {
+  background: #3B5998;
+}
+
+.friendbook-header img {
+  max-width: 100%;
+}
+
+.friendbook-intro {
+  text-align: center;
+  margin: 40px auto;
+  font-size: 22px;
+  max-width: 500px;
+  width: 100%;
+  line-height: 1.2;
+}
+
+.friendbook-card {
+  background: #D6D6D6;
+  margin:  40px auto;
+  width: 320px;
+  height: 445px;
+  border: 1px solid #D6D6D6;
+  position: relative;
+}
+
+.friendbook-card .action {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-100%);
+  left: 0;
+  width: 100%;
+}
+
+.friendbook-card img {
+  width: 100%;
+}
+
+.friendbook-footer {
+  font-size: 12px;
+  border-top: 1px solid #D6D6D6;
+  padding: 20px 10px;
+  line-height: 1.5;
+}
+
+.ui-button {
+  border: 2px solid #3B5998;
+  background: #FFFFFF;
+  color: #3B5998;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all .5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.ui-button.-inverse,
+.ui-button:hover {
+  background: #3B5998;
+  color: #FFFFFF;
+}
+
+.ui-button.-inverse:hover {
+  background: #FFFFFF;
+  color: #3B5998;
+}
+
+._hidden {
+  display: none;
+}
+
+._right {
+  float: right;
+}
