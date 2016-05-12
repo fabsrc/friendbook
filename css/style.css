@@ -2,17 +2,19 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
-  font-family: 'Helvetica', 'Arial', sans-serif;
   color: #909090;
+  font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 a {
-  color: #3B5998;
+  color: #3b5998;
   text-decoration: none;
 }
 
@@ -21,7 +23,7 @@ a:hover {
 }
 
 .friendbook-header {
-  background: #3B5998;
+  background: #3b5998;
 }
 
 .friendbook-header img {
@@ -29,29 +31,29 @@ a:hover {
 }
 
 .friendbook-intro {
-  text-align: center;
-  margin: 40px auto;
   font-size: 22px;
-  max-width: 500px;
-  width: 100%;
   line-height: 1.2;
+  margin: 40px auto;
+  max-width: 500px;
+  text-align: center;
+  width: 100%;
 }
 
 .friendbook-card {
-  background: #D6D6D6;
-  margin:  40px auto;
-  width: 320px;
+  background: #d6d6d6;
+  border: 1px solid #d6d6d6;
   height: 445px;
-  border: 1px solid #D6D6D6;
+  margin: 40px auto;
   position: relative;
+  width: 320px;
 }
 
 .friendbook-card .action {
-  text-align: center;
+  left: 0;
   position: absolute;
+  text-align: center;
   top: 50%;
   transform: translateY(-100%);
-  left: 0;
   width: 100%;
 }
 
@@ -59,35 +61,43 @@ a:hover {
   width: 100%;
 }
 
+.download-button {
+  opacity: 0;
+}
+
+.friendbook-card:hover .download-button {
+  opacity: 1;
+}
+
 .friendbook-footer {
+  border-top: 1px solid #d6d6d6;
   font-size: 12px;
-  border-top: 1px solid #D6D6D6;
-  padding: 20px 10px;
   line-height: 1.5;
+  padding: 20px 10px;
 }
 
 .ui-button {
-  border: 2px solid #3B5998;
-  background: #FFFFFF;
-  color: #3B5998;
-  padding: 4px 10px;
+  background: #fff;
+  border: 2px solid #3b5998;
+  color: #3b5998;
   cursor: pointer;
   font-size: 16px;
-  transition: all .5s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   font-weight: 600;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  transition: all .5s;
 }
 
 .ui-button.-inverse,
 .ui-button:hover {
-  background: #3B5998;
-  color: #FFFFFF;
+  background: #3b5998;
+  color: #fff;
 }
 
 .ui-button.-inverse:hover {
-  background: #FFFFFF;
-  color: #3B5998;
+  background: #fff;
+  color: #3b5998;
 }
 
 ._hidden {
