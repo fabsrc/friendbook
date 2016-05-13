@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <title>Friendbook</title>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/favicon.ico">
 </head>
 <body>
   <header class="friendbook-header">
-    <img src="img/logo.svg" alt="Friendbook">
+    <a href="index.html">
+      <img src="img/logo.svg" alt="Friendbook">
+    </a>
   </header>
 
   <div class="friendbook-intro">
@@ -19,8 +22,19 @@
   <div class="friendbook-card">
     <img id="preview">
     <div class="action">
+      <div id="overlay" class="friendbook-overlay _hidden">
+        <p class="text">After clicking <strong>Login with Facebook</strong> this application will get your personal Facebook information to create a personalized collectors card. All data processing happens locally in your browser. Your data won't be stored by us in any kind of way! [You can check out the source code on <a href="https://github.com/fabsrc/friendbook"><i class="fa fa-github"></i> Github</a>] After the creation of your card you will be logged out from Facebook automatically. <strong>Friendbook</strong> is in no way affiliated with Facebook.</p>
+        <button class="ui-button -inverse login-button" id="login"><i class="fa fa-facebook"></i>  Login with Facebook</button>
+      </div>
+      <div id="spinner" class="spinner _hidden">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
       <button class="ui-button create-button" id="create">Create Card</button>
-      <button class="ui-button -inverse download-button _hidden" id="download">Download</button>
+      <button class="ui-button -inverse download-button _hidden" id="download"><i class="fa fa-arrow-down"></i> Download</button>
       </div>
   </div>
 

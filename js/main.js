@@ -130,6 +130,9 @@ function downloadCard() {
 }
 
 function getData() {
+  document.getElementById('overlay').classList.add('_hidden');
+  document.getElementById('spinner').classList.remove('_hidden');
+
   fb.login({ scope: 'email, friends, photos, user_birthday, user_hometown, user_likes, user_location, user_relationships, user_work_history, user_education_history' })
     .then(function(auth) {
       return {
@@ -246,8 +249,8 @@ function createCard(data) {
       ctx.fillText(data.name, 400, 430);
 
       document.getElementById('preview').src = canvas.toDataURL('image/png');
-      document.getElementById('download').classList.remove("_hidden");
-      document.getElementById('create').classList.add("_hidden");
+      document.getElementById('download').classList.remove('_hidden');
+      document.getElementById('spinner').classList.add('_hidden');
 
       createPDF();
     };
@@ -268,5 +271,11 @@ function createPDF() {
   doc.addImage(canvas.toDataURL('image/png'), 'JPEG', 141, 203, 64, 89);
 }
 
-document.getElementById('create').addEventListener('click', getData);
+function openOverlay() {
+  document.getElementById('overlay').classList.remove('_hidden');
+  document.getElementById('login').addEventListener('click', getData);
+  document.getElementById('create').classList.add('_hidden');
+}
+
+document.getElementById('create').addEventListener('click', openOverlay);
 document.getElementById('download').addEventListener('click', downloadCard);

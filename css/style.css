@@ -22,6 +22,25 @@ a:hover {
   text-decoration: underline;
 }
 
+b,
+strong {
+  font-weight: bold;
+}
+
+h1,h2,h3 {
+  font-size: 22px;
+  margin-bottom: 1em;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.4;
+}
+
+p + p {
+  margin-top: .5em;
+}
+
 .friendbook-header {
   background: #3b5998;
 }
@@ -31,8 +50,6 @@ a:hover {
 }
 
 .friendbook-intro {
-  font-size: 22px;
-  line-height: 1.2;
   margin: 40px auto;
   max-width: 500px;
   text-align: center;
@@ -53,11 +70,12 @@ a:hover {
   position: absolute;
   text-align: center;
   top: 50%;
-  transform: translateY(-100%);
+  transform: translateY(-50%);
   width: 100%;
 }
 
 .friendbook-card img {
+  transition: all .5s;
   width: 100%;
 }
 
@@ -69,6 +87,10 @@ a:hover {
   opacity: 1;
 }
 
+.friendbook-card:hover img {
+  opacity: .5;
+}
+
 .friendbook-footer {
   border-top: 1px solid #d6d6d6;
   font-size: 12px;
@@ -76,12 +98,26 @@ a:hover {
   padding: 20px 10px;
 }
 
+.friendbook-overlay .text {
+  color: #222;
+  font-size: 14px;
+  padding: 0 57px 20px;
+  text-align: left;
+}
+
+.friendbook-privacy {
+  max-width: 500px;
+  width: 100%;
+  margin: 50px auto;
+}
+
 .ui-button {
+  display: inline-block;
   background: #fff;
   border: 2px solid #3b5998;
   color: #3b5998;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 1px;
   padding: 4px 10px;
@@ -93,6 +129,7 @@ a:hover {
 .ui-button:hover {
   background: #3b5998;
   color: #fff;
+  text-decoration: none;
 }
 
 .ui-button.-inverse:hover {
@@ -106,4 +143,64 @@ a:hover {
 
 ._right {
   float: right;
+}
+
+.spinner {
+  font-size: 10px;
+  height: 40px;
+  margin: 100px auto;
+  text-align: center;
+  width: 50px;
+}
+
+.spinner > div {
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+          animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  background-color: #3b5998;
+  display: inline-block;
+  height: 100%;
+  width: 6px;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+          animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+          animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -.9s;
+          animation-delay: -.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -.8s;
+          animation-delay: -.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(.4);
+            transform: scaleY(.4);
+  }  20% {
+    -webkit-transform: scaleY(1.0);
+            transform: scaleY(1.0);
+  }
 }
